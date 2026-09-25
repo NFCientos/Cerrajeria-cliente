@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fontanería García</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Claudio Cerrajería en Carretera</title>
 
 <style>
     * {
@@ -12,8 +12,8 @@
 
     body {
         font-family: Arial, Helvetica, sans-serif;
-        background: #FFFFFF;
-        color: #333333;
+        background: #111111;
+        color: white;
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -27,15 +27,21 @@
     }
 
     .logo {
-        width: 220px;
-        margin: 0 auto 20px;
-}
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        background: #222222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d4af37;
+        overflow: hidden;
+    }
 
-.logo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+    .logo span {
+        font-size: 42px;
+    }
 
     h1 {
         font-size: 27px;
@@ -43,14 +49,14 @@
     }
 
     .subtitulo {
-        color: #0066CC;
+        color: #d4af37;
         font-size: 17px;
         font-weight: bold;
         margin-bottom: 8px;
     }
 
     .horario {
-        color: #555555;
+        color: #dddddd;
         margin-bottom: 25px;
     }
 
@@ -64,20 +70,19 @@
         color: white;
         font-size: 17px;
         font-weight: bold;
-        background: #F0F0F0;
-        border: 1px solid #CCCCCC;
-        color: #333333;
+        background: #222222;
+        border: 1px solid #444444;
         transition: 0.2s;
     }
 
     .boton:hover {
         transform: scale(1.02);
-        background: #E8E8E8;
+        background: #333333;
     }
 
     .principal {
-        background: #0066CC;
-        color: white;
+        background: #d4af37;
+        color: #111111;
         border: none;
     }
 
@@ -95,27 +100,27 @@
         text-align: center;
         font-size: 21px;
         margin-bottom: 15px;
-        color: #0066CC;
+        color: #d4af37;
     }
 
     .servicio {
-        background: #F5F5F5;
+        background: #1c1c1c;
         padding: 14px;
         margin: 8px 0;
         border-radius: 10px;
-        border-left: 3px solid #0066CC;
+        border-left: 3px solid #d4af37;
     }
 
     .direccion {
         margin-top: 25px;
-        color: #666666;
+        color: #cccccc;
         font-size: 14px;
         line-height: 1.5;
     }
 
     footer {
         margin-top: 35px;
-        color: #888888;
+        color: #777777;
         font-size: 12px;
     }
 </style>
@@ -124,35 +129,40 @@
 
     <!-- LOGO -->
     <div class="logo">
-        <img src="fontaneria-garcia-logo.png"
-            alt="Fontanería García">
+        <span>🔑</span>
     </div>
 
-    <h1>Fontanería García</h1>
+    <h1>Claudio Cerrajería en Carretera</h1>
 
     <div class="subtitulo">
-        🔧 Soluciones en agua para tu hogar
+        🔐 Cerrajería 24/7
     </div>
 
     <p class="horario">
-        Servicios de fontanería residencial y comercial
+        Servicio de cerrajería y apertura de emergencia
     </p>
 
 
     <!-- BOTONES -->
 
-<a class="boton principal"
-   href="tel:+56212345678">
-    📞 Llamar
-</a>
+    <a class="boton principal"
+       href="tel:+56945635606">
+        📞 Llamar ahora
+    </a>
 
-<a class="boton whatsapp"
-   href="https://wa.me/56912345678">
-    💬 WhatsApp
-</a>
+    <a class="boton whatsapp"
+       href="https://wa.me/56945635606">
+        💬 WhatsApp
+    </a>
 
     <a class="boton"
-       href="https://www.instagram.com/fontanerigarcia"
+       href="https://www.google.com/maps/search/?api=1&query=Cancha+Rayada+4294,+Arica,+Arica+y+Parinacota"
+       target="_blank">
+        📍 Cómo llegar
+    </a>
+
+    <a class="boton"
+       href="https://www.instagram.com/Cerra_jeria_xv/"
        target="_blank">
         📸 Instagram
     </a>
@@ -162,30 +172,30 @@
 
     <section class="seccion">
 
-        <h2>🔧 Nuestros servicios</h2>
+        <h2>🛠️ Nuestros servicios</h2>
 
         <div class="servicio">
-            💧 Reparación de tuberías
+            🚗 Apertura de vehículos
         </div>
 
         <div class="servicio">
-            🔩 Instalación de tuberías
+            🏠 Apertura de casas
         </div>
 
         <div class="servicio">
-            🌊 Destape de cañerías
+            🔒 Apertura de candados
         </div>
 
         <div class="servicio">
-            🚰 Reparación de grifos
+            🔑 Creación de llaves perdidas
         </div>
 
         <div class="servicio">
-            🔥 Instalación de calefont
+            🗝️ Copias de llaves
         </div>
 
         <div class="servicio">
-            ✅ Mantenimiento preventivo
+            🕐 Atención 24/7
         </div>
 
     </section>
@@ -194,13 +204,13 @@
     <!-- DIRECCIÓN -->
 
     <p class="direccion">
-        📍 Avenida Principal 450<br>
-        Ñuñoa, Santiago
+        📍 Cancha Rayada 4294<br>
+        Arica, Arica y Parinacota
     </p>
 
 
     <footer>
-        Fontanería García
+        Claudio Cerrajería en Carretera
     </footer>
 
 </main>
