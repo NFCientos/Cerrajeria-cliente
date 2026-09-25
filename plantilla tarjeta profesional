@@ -1,1 +1,246 @@
 index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>{{NOMBRE_NEGOCIO}}</title>
+
+                <style>
+                        * {
+                                        box-sizing: border-box;
+                                                    margin: 0;
+                                                                padding: 0;
+                        }
+
+                                body {
+                                                font-family: Arial, Helvetica, sans-serif;
+                                                            background: #111111;
+                                                                        color: white;
+                                                                                    min-height: 100vh;
+                                                                                                display: flex;
+                                                                                                            justify-content: center;
+                                }
+
+                                        .contenedor {
+                                                        width: 100%;
+                                                                    max-width: 480px;
+                                                                                padding: 30px 20px 40px;
+                                                                                            text-align: center;
+                                        }
+
+                                                .logo {
+                                                                width: 220px;
+                                                                            margin: 0 auto 20px;
+                                                }
+
+                                                        .logo img {
+                                                                        width: 100%;
+                                                                                    height: auto;
+                                                                                                display: block;
+                                                        }
+
+                                                                h1 {
+                                                                                font-size: 27px;
+                                                                                            margin-bottom: 8px;
+                                                                }
+
+                                                                        .subtitulo {
+                                                                                        color: #d4af37;
+                                                                                                    font-size: 17px;
+                                                                                                                font-weight: bold;
+                                                                                                                            margin-bottom: 8px;
+                                                                        }
+
+                                                                                .horario {
+                                                                                                color: #dddddd;
+                                                                                                            margin-bottom: 25px;
+                                                                                }
+
+                                                                                        .boton {
+                                                                                                        display: block;
+                                                                                                                    width: 100%;
+                                                                                                                                padding: 17px 15px;
+                                                                                                                                            margin: 12px 0;
+                                                                                                                                                        border-radius: 12px;
+                                                                                                                                                                    text-decoration: none;
+                                                                                                                                                                                color: white;
+                                                                                                                                                                                            font-size: 17px;
+                                                                                                                                                                                                        font-weight: bold;
+                                                                                                                                                                                                                    background: #222222;
+                                                                                                                                                                                                                                border: 1px solid #444444;
+                                                                                                                                                                                                                                            transition: 0.2s;
+                                                                                        }
+
+                                                                                                .boton:hover {
+                                                                                                                transform: scale(1.02);
+                                                                                                                            background: #333333;
+                                                                                                }
+
+                                                                                                        .principal {
+                                                                                                                        background: #d4af37;
+                                                                                                                                    color: #111111;
+                                                                                                                                                border: none;
+                                                                                                        }
+
+                                                                                                                .whatsapp {
+                                                                                                                                background: #168a45;
+                                                                                                                                            border: none;
+                                                                                                                }
+
+                                                                                                                        .seccion {
+                                                                                                                                        margin-top: 30px;
+                                                                                                                                                    text-align: left;
+                                                                                                                        }
+
+                                                                                                                                .seccion h2 {
+                                                                                                                                                text-align: center;
+                                                                                                                                                            font-size: 21px;
+                                                                                                                                                                        margin-bottom: 15px;
+                                                                                                                                                                                    color: #d4af37;
+                                                                                                                                }
+
+                                                                                                                                        .servicio {
+                                                                                                                                                        background: #1c1c1c;
+                                                                                                                                                                    padding: 14px;
+                                                                                                                                                                                margin: 8px 0;
+                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                                        border-left: 3px solid #d4af37;
+                                                                                                                                        }
+
+                                                                                                                                                .direccion {
+                                                                                                                                                                margin-top: 25px;
+                                                                                                                                                                            color: #cccccc;
+                                                                                                                                                                                        font-size: 14px;
+                                                                                                                                                                                                    line-height: 1.5;
+                                                                                                                                                }
+
+                                                                                                                                                        footer {
+                                                                                                                                                                        margin-top: 35px;
+                                                                                                                                                                                    color: #777777;
+                                                                                                                                                                                                font-size: 12px;
+                                                                                                                                                        }
+                                                                                                                                                            </style>
+                                                                                                                                                            </head>
+
+                                                                                                                                                            <body>
+
+                                                                                                                                                            <main class="contenedor">
+
+                                                                                                                                                                <!-- LOGO -->
+                                                                                                                                                                    <div class="logo">
+                                                                                                                                                                            <img src="{{LOGO}}" alt="{{NOMBRE_NEGOCIO}}">
+                                                                                                                                                                                </div>
+
+                                                                                                                                                                                    <!-- INFORMACIÓN PRINCIPAL -->
+
+                                                                                                                                                                                        <h1>{{NOMBRE_NEGOCIO}}</h1>
+
+                                                                                                                                                                                            <div class="subtitulo">
+                                                                                                                                                                                                    {{ESPECIALIDAD}}
+                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                            <p class="horario">
+                                                                                                                                                                                                                    {{DESCRIPCION}}
+                                                                                                                                                                                                                        </p>
+
+
+                                                                                                                                                                                                                            <!-- CONTACTO 1 -->
+
+                                                                                                                                                                                                                                <p><strong>📞 Contacto 1</strong></p>
+
+                                                                                                                                                                                                                                    <a class="boton principal"
+                                                                                                                                                                                                                                           href="tel:{{TELEFONO_1}}">
+                                                                                                                                                                                                                                                   📞 Llamar
+                                                                                                                                                                                                                                                       </a>
+
+                                                                                                                                                                                                                                                           <a class="boton whatsapp"
+                                                                                                                                                                                                                                                                  href="https://wa.me/{{WHATSAPP_1}}">
+                                                                                                                                                                                                                                                                          💬 WhatsApp
+                                                                                                                                                                                                                                                                              </a>
+
+
+                                                                                                                                                                                                                                                                                  <!-- CONTACTO 2 -->
+
+                                                                                                                                                                                                                                                                                      <p><strong>📞 Contacto 2</strong></p>
+
+                                                                                                                                                                                                                                                                                          <a class="boton principal"
+                                                                                                                                                                                                                                                                                                 href="tel:{{TELEFONO_2}}">
+                                                                                                                                                                                                                                                                                                         📞 Llamar
+                                                                                                                                                                                                                                                                                                             </a>
+
+                                                                                                                                                                                                                                                                                                                 <a class="boton whatsapp"
+                                                                                                                                                                                                                                                                                                                        href="https://wa.me/{{WHATSAPP_2}}">
+                                                                                                                                                                                                                                                                                                                                💬 WhatsApp
+                                                                                                                                                                                                                                                                                                                                    </a>
+
+
+                                                                                                                                                                                                                                                                                                                                        <!-- UBICACIÓN -->
+
+                                                                                                                                                                                                                                                                                                                                            <a class="boton"
+                                                                                                                                                                                                                                                                                                                                                   href="{{GOOGLE_MAPS}}"
+                                                                                                                                                                                                                                                                                                                                                          target="_blank">
+                                                                                                                                                                                                                                                                                                                                                                  📍 Cómo llegar
+                                                                                                                                                                                                                                                                                                                                                                      </a>
+
+
+                                                                                                                                                                                                                                                                                                                                                                          <!-- RED SOCIAL -->
+
+                                                                                                                                                                                                                                                                                                                                                                              <a class="boton"
+                                                                                                                                                                                                                                                                                                                                                                                     href="{{INSTAGRAM}}"
+                                                                                                                                                                                                                                                                                                                                                                                            target="_blank">
+                                                                                                                                                                                                                                                                                                                                                                                                    📸 Instagram
+                                                                                                                                                                                                                                                                                                                                                                                                        </a>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                            <!-- SERVICIOS -->
+
+                                                                                                                                                                                                                                                                                                                                                                                                                <section class="seccion">
+
+                                                                                                                                                                                                                                                                                                                                                                                                                        <h2>🛠️ Nuestros servicios</h2>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                            {{SERVICIO_1}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {{SERVICIO_2}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    {{SERVICIO_3}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {{SERVICIO_4}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {{SERVICIO_5}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="servicio">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {{SERVICIO_6}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </section>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- DIRECCIÓN -->
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p class="direccion">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    📍 {{DIRECCION}}<br>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {{CIUDAD}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </p>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <footer>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {{NOMBRE_NEGOCIO}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </footer>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </main>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>
+                        }
