@@ -1,10 +1,26 @@
 FORMULARIO MAESTRO — CREACIÓN DE PÁGINA WEB
 
+IMPORTANTE
+
+Este formulario contiene exclusivamente la información correspondiente al cliente que se desea crear.
+
+La información de este formulario no autoriza por sí sola la modificación de sitios web de otros clientes.
+
+Cada nuevo cliente debe recibir una página independiente basada en la plantilla de automatización.
+
+No utilizar datos, imágenes, logotipos, teléfonos, enlaces ni textos pertenecientes a otros clientes.
+
+---
+
 INSTRUCCIONES
 
 Este formulario debe ser completado por el cliente antes de comenzar la creación de su página web.
 
-Las respuestas deben conservarse tal como fueron entregadas por el cliente. Si una pregunta no corresponde, escribir "No aplica".
+Las respuestas deben conservarse tal como fueron entregadas por el cliente.
+
+Si una pregunta no corresponde, escribir:
+
+"No aplica"
 
 ---
 
@@ -212,3 +228,15 @@ Estilo visual solicitado:
 Colores:
 
 Observaciones especiales:
+
+---
+
+PRINCIPIO DEL FORMULARIO
+
+FORMULARIO = datos reales del cliente.
+
+PLANTILLA = estructura reutilizable.
+
+Cada cliente debe utilizar una copia independiente de la plantilla.
+
+El formulario de un cliente nunca debe provocar la modificación de otro sitio existente.
