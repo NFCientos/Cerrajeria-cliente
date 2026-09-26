@@ -12,7 +12,7 @@ ARCHIVOS IMPORTANTES
 
 Antes de modificar una página, revisar:
 
-- "formulario-cliente.md"
+- "Formulario-cliente.md"
 - "INSTRUCCIONES-AGENTE.md"
 - "Index.html"
 - "Plantilla tarjeta profesional"
