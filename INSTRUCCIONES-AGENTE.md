@@ -12,7 +12,7 @@ El objetivo es transformar las respuestas de un cliente en una página web funci
 
 Antes de realizar cualquier modificación:
 
-1. Revisar "formulario-cliente.md".
+1. Revisar "Formulario-cliente.md".
 2. Revisar "Plantilla Tarjeta Profesional".
 3. Revisar "Index.html".
 4. Revisar los recursos disponibles, incluyendo imágenes y logotipos.
