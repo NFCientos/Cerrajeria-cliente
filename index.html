@@ -1,96 +1,130 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Claudio Cerrajería en Carretera</title>
 
-    <title>Claudio Cerrajería en Carretera</title>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #111111;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
 
-        body {
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #111;
-            color: white;
-        }
+    .contenedor {
+        width: 100%;
+        max-width: 480px;
+        padding: 30px 20px 40px;
+        text-align: center;
+    }
 
-        .logo {
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
+    .logo {
+        width: 220px;
+        margin: 0 auto 20px;
+}
 
-        .logo img {
-            width: 180px;
-            max-width: 80%;
-            height: auto;
-        }
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        h1 {
-            margin: 10px 0;
-            font-size: 28px;
-        }
+    h1 {
+        font-size: 27px;
+        margin-bottom: 8px;
+    }
 
-        .subtitulo {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
+    .subtitulo {
+        color: #d4af37;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
 
-        .horario {
-            font-size: 16px;
-            margin: 10px auto 25px;
-            max-width: 450px;
-        }
+    .horario {
+        color: #dddddd;
+        margin-bottom: 25px;
+    }
 
-        .boton {
-            display: block;
-            width: 90%;
-            max-width: 400px;
-            margin: 12px auto;
-            padding: 15px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .boton {
+        display: block;
+        width: 100%;
+        padding: 17px 15px;
+        margin: 12px 0;
+        border-radius: 12px;
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        background: #222222;
+        border: 1px solid #444444;
+        transition: 0.2s;
+    }
 
-        .principal {
-            background: #ffffff;
-            color: #111111;
-        }
+    .boton:hover {
+        transform: scale(1.02);
+        background: #333333;
+    }
 
-        .whatsapp {
-            background: #25D366;
-            color: white;
-        }
+    .principal {
+        background: #d4af37;
+        color: #111111;
+        border: none;
+    }
 
-        .contacto {
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
+    .whatsapp {
+        background: #168a45;
+        border: none;
+    }
 
-        .contacto-titulo {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
+    .seccion {
+        margin-top: 30px;
+        text-align: left;
+    }
 
-<body>
+    .seccion h2 {
+        text-align: center;
+        font-size: 21px;
+        margin-bottom: 15px;
+        color: #d4af37;
+    }
+
+    .servicio {
+        background: #1c1c1c;
+        padding: 14px;
+        margin: 8px 0;
+        border-radius: 10px;
+        border-left: 3px solid #d4af37;
+    }
+
+    .direccion {
+        margin-top: 25px;
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    footer {
+        margin-top: 35px;
+        color: #777777;
+        font-size: 12px;
+    }
+</style>
+
+</head><body><main class="contenedor">
 
     <!-- LOGO -->
     <div class="logo">
         <img src="logo-cerrajeria.png"
-             alt="Claudio Cerrajería">
+            alt="Claudio Cerrajería">
     </div>
 
     <h1>Claudio Cerrajería en Carretera</h1>
@@ -104,40 +138,92 @@
     </p>
 
 
-    <!-- CONTACTOS -->
+    <!-- BOTONES -->
 
-    <div class="contacto">
+<p><strong>📞 Contacto 1</strong></p>
 
-        <div class="contacto-titulo">
-            📞 Contacto 1
+<a class="boton principal"
+   href="tel:+56945635606">
+    📞 Llamar
+</a>
+
+<a class="boton whatsapp"
+   href="https://wa.me/56945635606">
+    💬 WhatsApp
+</a>
+
+
+<p><strong>📞 Contacto 2</strong></p>
+
+<a class="boton principal"
+   href="tel:+56942590947">
+    📞 Llamar
+</a>
+
+<a class="boton whatsapp"
+   href="https://wa.me/56942590947">
+    💬 WhatsApp
+</a>
+
+    <a class="boton"
+       href="https://www.google.com/maps/search/?api=1&query=Cancha+Rayada+4294,+Arica,+Arica+y+Parinacota"
+       target="_blank">
+        📍 Cómo llegar
+    </a>
+
+    <a class="boton"
+       href="https://www.instagram.com/Cerra_jeria_xv/"
+       target="_blank">
+        📸 Instagram
+    </a>
+
+
+    <!-- SERVICIOS -->
+
+    <section class="seccion">
+
+        <h2>🛠️ Nuestros servicios</h2>
+
+        <div class="servicio">
+            🚗 Apertura de vehículos
         </div>
 
-        <a class="boton principal"
-           href="tel:+56945635606">
-            📞 Llamar
-        </a>
-
-        <a class="boton whatsapp"
-           href="https://wa.me/56945635606">
-            💬 WhatsApp
-        </a>
-
-
-        <div class="contacto-titulo">
-            📞 Contacto 2
+        <div class="servicio">
+            🏠 Apertura de casas
         </div>
 
-        <a class="boton principal"
-           href="tel:+56942590947">
-            📞 Llamar
-        </a>
+        <div class="servicio">
+            🔒 Apertura de candados
+        </div>
 
-        <a class="boton whatsapp"
-           href="https://wa.me/56942590947">
-            💬 WhatsApp
-        </a>
+        <div class="servicio">
+            🔑 Creación de llaves perdidas
+        </div>
 
-    </div>
+        <div class="servicio">
+            🗝️ Copias de llaves
+        </div>
+
+        <div class="servicio">
+            🕐 Atención 24/7
+        </div>
+
+    </section>
+
+
+    <!-- DIRECCIÓN -->
+
+    <p class="direccion">
+        📍 Cancha Rayada 4294<br>
+        Arica, Arica y Parinacota
+    </p>
+
+
+    <footer>
+        Claudio Cerrajería en Carretera
+    </footer>
+
+</main>
 
 </body>
 </html>
