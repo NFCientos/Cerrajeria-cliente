@@ -8,36 +8,74 @@ El agente debe transformar la información entregada por cada cliente en una pá
 
 ---
 
-ARCHIVOS IMPORTANTES
+REGLA CRÍTICA — PROTECCIÓN DE SITIOS EXISTENTES
 
-Antes de modificar una página, revisar:
+Los sitios web de clientes existentes son independientes del sistema de automatización.
 
-- "Formulario-cliente.md"
-- "INSTRUCCIONES-AGENTE.md"
-- "Index.html"
-- "Plantilla tarjeta profesional"
-- imágenes y otros recursos existentes
+El agente NO debe modificar, reemplazar, eliminar, renombrar ni utilizar directamente como archivo de trabajo ningún archivo perteneciente a un cliente existente, salvo autorización explícita del usuario.
 
-Función de cada archivo
+En este repositorio:
 
-"formulario-cliente.md"
-Contiene las preguntas y la información que debe proporcionar el cliente.
+- "Index.html" pertenece al sitio existente de Cerrajería.
+- "logo-cerrajeria.png" pertenece al sitio existente de Cerrajería.
+- "plantilla tarjeta profesional" es un recurso de referencia existente.
 
-"INSTRUCCIONES-AGENTE.md"
-Contiene las reglas generales del proceso de creación de páginas.
+Estos archivos deben considerarse PROTEGIDOS.
 
-"AGENTS.md"
-Contiene las instrucciones que el agente debe seguir mientras trabaja en este repositorio.
+Para crear páginas de nuevos clientes se deberá utilizar exclusivamente una plantilla independiente destinada a la automatización y crear una copia independiente para cada nuevo cliente.
 
-"Index.html"
-Es la página web actualmente implementada.
+Nunca convertir "Index.html" de Cerrajería en el sitio de un cliente nuevo.
 
-"Plantilla tarjeta profesional"
-Es una referencia visual y funcional para la creación de nuevas páginas.
+Si existe cualquier duda sobre qué archivo debe modificarse, detenerse y solicitar confirmación al usuario antes de realizar cambios.
 
 ---
 
-REGLA PRINCIPAL
+ARCHIVOS DEL PROYECTO
+
+Antes de realizar cualquier modificación relacionada con la automatización, revisar:
+
+- "Formulario-cliente.md"
+- "INSTRUCCIONES-AGENTE.md"
+- la plantilla independiente destinada a nuevos clientes
+- los recursos específicos del cliente que se esté creando
+
+No utilizar los archivos protegidos de un cliente existente como archivos de trabajo.
+
+Función de cada archivo
+
+"Formulario-cliente.md"
+
+Contiene las preguntas y la información que debe proporcionar cada cliente.
+
+"INSTRUCCIONES-AGENTE.md"
+
+Contiene las reglas generales del proceso de creación de páginas.
+
+"AGENTS.md"
+
+Contiene las instrucciones que el agente debe seguir mientras trabaja en este repositorio.
+
+"Index.html"
+
+Es el sitio actualmente implementado de Cerrajería.
+
+Está protegido y no debe utilizarse como plantilla para nuevos clientes.
+
+"logo-cerrajeria.png"
+
+Es un recurso perteneciente al sitio de Cerrajería.
+
+Está protegido y no debe reutilizarse para otros clientes.
+
+"plantilla tarjeta profesional"
+
+Es un recurso de referencia visual y funcional.
+
+No debe modificarse salvo autorización explícita.
+
+---
+
+REGLA PRINCIPAL DE INFORMACIÓN
 
 La información real proporcionada por el cliente tiene prioridad sobre cualquier información existente en ejemplos o plantillas.
 
@@ -83,17 +121,21 @@ Identificar:
 - imágenes
 - funciones solicitadas
 
-PASO 2 — REVISAR LA PLANTILLA
+PASO 2 — SELECCIONAR LA PLANTILLA
 
-Revisar la estructura existente antes de modificarla.
+Utilizar exclusivamente la plantilla independiente destinada a nuevos clientes.
 
-Conservar las funcionalidades que sigan siendo útiles.
+No utilizar directamente:
 
-No eliminar elementos funcionales sin una razón.
+- "Index.html"
+- "logo-cerrajeria.png"
+- otros archivos pertenecientes a clientes existentes
+
+Crear una copia independiente de la plantilla para el nuevo cliente.
 
 PASO 3 — PERSONALIZAR
 
-Adaptar la página al nuevo negocio.
+Adaptar la copia de la plantilla al nuevo negocio.
 
 Modificar:
 
@@ -117,8 +159,9 @@ Comprobar que:
 - Google Maps apunta al lugar correcto
 - los teléfonos utilizan "tel:"
 - las imágenes tienen rutas correctas
-- no quedan datos del cliente anterior
+- no quedan datos de otro cliente
 - no existen enlaces ficticios
+- no se utilizaron recursos de otro cliente por error
 
 PASO 5 — RESPONSIVE
 
@@ -143,7 +186,12 @@ Si existen dos números:
 - Contacto 1 → primer número
 - Contacto 2 → segundo número
 
-Si el cliente solicita ocultar visualmente los números, mostrar solamente nombres como "Contacto 1" y "Contacto 2", manteniendo los enlaces funcionales.
+Si el cliente solicita ocultar visualmente los números, mostrar solamente nombres como:
+
+- Contacto 1
+- Contacto 2
+
+manteniendo los enlaces funcionales.
 
 ---
 
@@ -183,9 +231,9 @@ IMÁGENES
 
 Utilizar primero los recursos proporcionados por el cliente.
 
-Respetar el logotipo existente.
+Respetar el logotipo existente de cada cliente.
 
-No reemplazar imágenes del cliente sin autorización.
+No reemplazar imágenes de un cliente por imágenes pertenecientes a otro.
 
 Utilizar atributos "alt" descriptivos.
 
@@ -205,7 +253,7 @@ El diseño debe ser:
 
 Utilizar los colores proporcionados por el cliente cuando existan.
 
-Si no existen colores definidos, mantener un diseño coherente con la plantilla.
+Si no existen colores definidos, utilizar la plantilla independiente como referencia.
 
 ---
 
@@ -221,27 +269,29 @@ No introducir código malicioso.
 
 No modificar funcionalidades que no estén relacionadas con la solicitud.
 
+No modificar archivos protegidos.
+
 ---
 
-DATOS DEL CLIENTE ANTERIOR
+DATOS DE OTROS CLIENTES
 
-Cuando se utilice una página existente como plantilla para un nuevo cliente:
+Nunca copiar accidentalmente:
 
-Revisar cuidadosamente todo el HTML.
+- nombres
+- teléfonos
+- WhatsApp
+- direcciones
+- Google Maps
+- redes sociales
+- servicios
+- imágenes
+- textos
+- promociones
+- logotipos
 
-Eliminar o reemplazar:
+de un cliente a otro.
 
-- nombre anterior
-- teléfonos anteriores
-- WhatsApp anterior
-- dirección anterior
-- Google Maps anterior
-- redes sociales anteriores
-- servicios anteriores
-- imágenes anteriores
-- textos anteriores
-
-Antes de terminar, comprobar que no quede información perteneciente al cliente anterior.
+Cada cliente debe tener sus propios datos y recursos.
 
 ---
 
@@ -265,7 +315,11 @@ Realizar solamente los cambios necesarios para cumplir la solicitud.
 
 Evitar cambios destructivos.
 
-Antes de reemplazar una estructura importante, revisar cómo funciona actualmente.
+No modificar sitios de clientes existentes durante la creación de un nuevo sitio.
+
+No eliminar ni sobrescribir archivos de otros clientes.
+
+Si una acción pudiera afectar a un sitio existente, detenerse y solicitar confirmación.
 
 ---
 
@@ -280,9 +334,10 @@ Una página terminada debe:
 5. Funcionar en computadores.
 6. Ser responsive.
 7. Mantener una apariencia profesional.
-8. No contener información del cliente anterior.
+8. No contener información de otros clientes.
 9. No contener enlaces inventados.
-10. Ser fácil de modificar posteriormente.
+10. Ser independiente de otros sitios.
+11. Ser fácil de modificar posteriormente.
 
 ---
 
@@ -299,14 +354,20 @@ Explica brevemente:
 
 No afirmar que una función fue probada si realmente no pudo comprobarse.
 
+Indicar claramente si alguna prueba no pudo realizarse.
+
 ---
 
 PRINCIPIO FUNDAMENTAL
 
 FORMULARIO = información del cliente.
 
-PLANTILLA = estructura y diseño de referencia.
+PLANTILLA = estructura y diseño reutilizable.
+
+CLIENTE = copia independiente de la plantilla.
 
 AGENTS.MD = reglas que debe seguir el agente.
 
-El agente debe combinar estos elementos para producir una página web personalizada.
+SITIOS EXISTENTES = protegidos.
+
+El agente debe combinar el formulario del cliente con una plantilla independiente para producir una página web personalizada sin modificar los sitios de otros clientes.
