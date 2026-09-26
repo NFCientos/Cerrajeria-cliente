@@ -2,25 +2,54 @@ INSTRUCCIONES DEL AGENTE — CREACIÓN DE PÁGINAS WEB
 
 OBJETIVO
 
-Tu función es ayudar a crear y personalizar páginas web para clientes utilizando la información proporcionada en "formulario-cliente.md" y la estructura visual disponible en este repositorio.
+Tu función es ayudar a crear y personalizar páginas web para clientes utilizando la información proporcionada en "Formulario-cliente.md" y una plantilla independiente destinada a nuevos clientes.
 
 El objetivo es transformar las respuestas de un cliente en una página web funcional, profesional, clara y adaptable a teléfonos móviles.
 
 ---
 
-1. ARCHIVOS DEL PROYECTO
+1. PROTECCIÓN DE SITIOS EXISTENTES
 
-Antes de realizar cualquier modificación:
+Los sitios web de clientes existentes son independientes del sistema de automatización.
 
-1. Revisar "Formulario-cliente.md".
-2. Revisar "Plantilla Tarjeta Profesional".
-3. Revisar "Index.html".
-4. Revisar los recursos disponibles, incluyendo imágenes y logotipos.
-5. No modificar archivos innecesariamente.
+Nunca modificar, reemplazar, eliminar, renombrar ni sobrescribir archivos pertenecientes a un cliente existente durante la creación de un nuevo sitio.
+
+En este repositorio:
+
+- "Index.html" pertenece al sitio de Cerrajería.
+- "logo-cerrajeria.png" pertenece al sitio de Cerrajería.
+- "plantilla tarjeta profesional" es un recurso de referencia.
+
+Estos archivos están protegidos.
+
+No utilizar "Index.html" como plantilla de trabajo para un nuevo cliente.
+
+No reemplazar el contenido de "Index.html" por los datos de otro cliente.
+
+No reemplazar "logo-cerrajeria.png" por el logotipo de otro cliente.
+
+No modificar "plantilla tarjeta profesional" salvo autorización explícita.
+
+Si existe cualquier duda sobre qué archivo debe modificarse, detenerse y solicitar confirmación al usuario.
 
 ---
 
-2. INFORMACIÓN DEL CLIENTE
+2. ARCHIVOS DEL PROYECTO
+
+Antes de realizar una modificación relacionada con un nuevo cliente:
+
+1. Revisar "Formulario-cliente.md".
+2. Revisar "AGENTS.md".
+3. Revisar este archivo.
+4. Revisar la plantilla independiente destinada a nuevos clientes.
+5. Revisar los recursos específicos del cliente.
+6. No modificar archivos protegidos.
+
+No utilizar sitios existentes como plantillas de trabajo.
+
+---
+
+3. INFORMACIÓN DEL CLIENTE
 
 Utilizar exclusivamente la información proporcionada por el cliente.
 
@@ -43,7 +72,7 @@ Cuando una pregunta del formulario indique "No aplica", no mostrar esa informaci
 
 ---
 
-3. ESTRUCTURA DE LA PÁGINA
+4. ESTRUCTURA DE LA PÁGINA
 
 La página debe adaptarse al tipo de negocio.
 
@@ -69,7 +98,25 @@ Solo mostrar las secciones para las cuales exista información relevante.
 
 ---
 
-4. CONTACTO
+5. CREACIÓN DE UN NUEVO CLIENTE
+
+Cuando se reciba el formulario de un nuevo cliente:
+
+1. Analizar toda la información.
+2. Seleccionar la plantilla independiente.
+3. Crear una copia independiente para el nuevo cliente.
+4. Personalizar únicamente esa copia.
+5. Incorporar los datos del cliente.
+6. Incorporar los recursos del cliente.
+7. Revisar enlaces y funciones.
+8. Comprobar que no existan datos de otros clientes.
+9. Mantener intactos los sitios existentes.
+
+Nunca utilizar directamente el sitio de Cerrajería como punto de partida.
+
+---
+
+6. CONTACTO
 
 Cuando el cliente proporcione un número de WhatsApp:
 
@@ -86,21 +133,27 @@ Cada botón debe dirigir al número correspondiente.
 
 No mostrar números telefónicos innecesariamente si el cliente solicita que permanezcan ocultos visualmente.
 
-Si existe un teléfono para llamadas, crear un botón de llamada mediante "tel:".
+Si existe un teléfono para llamadas, crear un botón de llamada mediante:
+
+"tel:"
 
 ---
 
-5. GOOGLE MAPS
+7. GOOGLE MAPS
 
 Si el cliente proporciona un enlace de Google Maps:
 
 Crear un botón visible que permita abrir la ubicación.
 
+Utilizar exactamente el enlace proporcionado.
+
 No modificar ni inventar el enlace.
+
+Si falta el enlace, no crear un enlace ficticio.
 
 ---
 
-6. REDES SOCIALES
+8. REDES SOCIALES
 
 Si el cliente proporciona Instagram, Facebook o TikTok:
 
@@ -110,7 +163,7 @@ Si una red social no fue proporcionada, no crear un enlace ficticio.
 
 ---
 
-7. DISEÑO
+9. DISEÑO
 
 El diseño debe:
 
@@ -127,7 +180,7 @@ La página debe verse correctamente tanto en pantallas pequeñas como grandes.
 
 ---
 
-8. WHATSAPP
+10. WHATSAPP
 
 Los enlaces de WhatsApp deben utilizar el formato correcto.
 
@@ -141,11 +194,11 @@ No inventar datos del negocio dentro del mensaje.
 
 ---
 
-9. IMÁGENES
+11. IMÁGENES
 
 Utilizar las imágenes proporcionadas por el cliente cuando estén disponibles.
 
-No reemplazar un logotipo proporcionado por el cliente por otro.
+No reemplazar el logotipo de un cliente por el de otro.
 
 Utilizar textos "alt" descriptivos para las imágenes.
 
@@ -153,7 +206,7 @@ Si una imagen necesaria no está disponible, dejar preparada la estructura para 
 
 ---
 
-10. SEGURIDAD Y CALIDAD
+12. SEGURIDAD Y CALIDAD
 
 No incluir código malicioso.
 
@@ -167,7 +220,7 @@ Mantener el código organizado y fácil de modificar.
 
 ---
 
-11. COMPATIBILIDAD
+13. COMPATIBILIDAD
 
 La página debe funcionar en:
 
@@ -180,27 +233,36 @@ Evitar depender de funciones experimentales.
 
 ---
 
-12. CONSERVACIÓN DE LA PLANTILLA
+14. INDEPENDENCIA ENTRE CLIENTES
 
-La plantilla existente debe utilizarse como referencia.
+Cada cliente debe tener:
 
-No eliminar funcionalidades que ya funcionan correctamente sin una razón explícita.
+- sus propios datos
+- sus propios textos
+- sus propios enlaces
+- sus propios logotipos
+- sus propias fotografías
+- su propia página
+- su propia copia de la plantilla
 
-Cuando se personalice una página para un nuevo cliente:
+Nunca reutilizar accidentalmente información de otro cliente.
 
-- conservar la estructura útil
-- reemplazar la información del cliente anterior
-- reemplazar imágenes cuando corresponda
-- actualizar enlaces
-- actualizar colores
-- actualizar textos
-- revisar todos los botones
+Antes de finalizar una página, comprobar que no contiene:
 
-Antes de finalizar, comprobar que no queden datos del cliente anterior.
+- nombre de otro negocio
+- teléfonos de otro negocio
+- WhatsApp de otro negocio
+- dirección de otro negocio
+- Google Maps de otro negocio
+- redes sociales de otro negocio
+- servicios de otro negocio
+- promociones de otro negocio
+- logotipos de otro negocio
+- fotografías de otro negocio
 
 ---
 
-13. DATOS FALTANTES
+15. DATOS FALTANTES
 
 Si faltan datos esenciales para construir una función:
 
@@ -216,7 +278,7 @@ Si la información faltante no impide crear la página, continuar utilizando ún
 
 ---
 
-14. REVISIÓN FINAL
+16. REVISIÓN FINAL
 
 Antes de considerar terminada una página:
 
@@ -236,37 +298,64 @@ Comprobar:
 - botones
 - enlaces
 - versión móvil
-- ausencia de información del cliente anterior
+- ausencia de información de otros clientes
+- independencia de los archivos de otros clientes
 
 Todos los enlaces deben apuntar al destino correcto.
 
+No afirmar que una función fue probada si realmente no pudo comprobarse.
+
 ---
 
-15. FORMA DE TRABAJO
+17. FORMA DE TRABAJO
 
 Cuando recibas las respuestas de un nuevo cliente:
 
 1. Analizar toda la información.
 2. Identificar qué secciones necesita la página.
-3. Revisar la plantilla existente.
-4. Determinar qué elementos deben modificarse.
-5. Implementar la información del nuevo cliente.
-6. Mantener las funcionalidades existentes que sean útiles.
-7. Eliminar información que no corresponda.
+3. Seleccionar la plantilla independiente.
+4. Crear una copia para el cliente.
+5. Determinar qué elementos deben modificarse.
+6. Implementar la información del cliente.
+7. Incorporar sus recursos.
 8. Revisar enlaces y botones.
-9. Revisar la versión móvil.
-10. Informar claramente qué se modificó y qué información falta.
+9. Revisar la versión móvil cuando sea posible.
+10. Comprobar que ningún archivo protegido fue modificado.
+11. Informar claramente qué se modificó y qué información falta.
 
-No realizar cambios destructivos sin indicarlo previamente.
+No realizar cambios destructivos.
+
+---
+
+18. REGLA DE SEGURIDAD ANTE DUDAS
+
+Si el agente no puede determinar con certeza:
+
+- qué archivo pertenece al nuevo cliente
+- cuál es la plantilla independiente
+- qué archivo debe modificar
+- si una acción puede afectar a un cliente existente
+
+debe detenerse y solicitar confirmación al usuario.
+
+No asumir.
+
+No sobrescribir.
+
+No eliminar.
 
 ---
 
 PRINCIPIO FUNDAMENTAL
 
-La información entregada por el cliente tiene prioridad sobre cualquier información de ejemplo existente en la plantilla.
+FORMULARIO = datos reales del cliente.
 
-La plantilla proporciona estructura y diseño.
+PLANTILLA = estructura y diseño reutilizable.
 
-El formulario proporciona los datos reales.
+CLIENTE = copia independiente de la plantilla.
 
-El agente debe combinar ambos elementos para producir una página web personalizada.
+SITIOS EXISTENTES = protegidos.
+
+AGENTS.MD = reglas generales del agente.
+
+El agente debe combinar el formulario del cliente con una plantilla independiente para producir una página web personalizada sin modificar los sitios de otros clientes.
