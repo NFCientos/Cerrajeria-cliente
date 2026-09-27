@@ -237,13 +237,51 @@ No inventar datos del negocio dentro del mensaje.
 
 11. IMÁGENES
 
-Utilizar las imágenes proporcionadas por el cliente cuando estén disponibles.
+Utilizar únicamente las imágenes proporcionadas por el cliente cuando estén disponibles.
 
-No reemplazar el logotipo de un cliente por el de otro.
+Los recursos visuales de cada cliente son independientes.
+
+Cuando el cliente proporcione un logotipo:
+
+1. Guardar el logotipo dentro de la carpeta exclusiva de ese cliente.
+2. Utilizar ese archivo para reemplazar la variable "{{LOGO}}".
+3. Utilizar una ruta relativa que apunte al recurso ubicado dentro de la propia carpeta del cliente.
+
+Ejemplo:
+
+"CLIENTES/nombre-del-cliente/logo.png"
+
+y:
+
+"CLIENTES/nombre-del-cliente/index.html"
+
+deben pertenecer al mismo cliente.
+
+No utilizar como recurso de un nuevo cliente:
+
+- "logo-cerrajeria.png"
+- logotipos de otros clientes
+- fotografías de otros clientes
+- imágenes de otros clientes
+- recursos ubicados en carpetas de otros clientes
+
+Nunca utilizar rutas como:
+
+"../../logo-cerrajeria.png"
+
+ni ninguna otra ruta que haga que un nuevo cliente dependa del logotipo de Cerrajería o de otro cliente.
+
+Si el cliente no proporciona un logotipo:
+
+- No inventar uno.
+- No reutilizar el logotipo de otro cliente.
+- No copiar un logotipo existente de otro sitio.
+- No utilizar "logo-cerrajeria.png".
+- Mantener preparada la estructura para incorporar posteriormente el logotipo del cliente.
 
 Utilizar textos "alt" descriptivos para las imágenes.
 
-Si una imagen necesaria no está disponible, dejar preparada la estructura para incorporarla posteriormente en lugar de inventar una imagen.
+Si una imagen necesaria no está disponible, dejar preparada la estructura para incorporarla posteriormente en lugar de inventar o reutilizar una imagen perteneciente a otro cliente.
 
 ---
 
