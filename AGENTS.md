@@ -121,17 +121,44 @@ Identificar:
 - imágenes
 - funciones solicitadas
 
-PASO 2 — SELECCIONAR LA PLANTILLA
+ PASO 2 — SELECCIONAR LA PLANTILLA
 
-Utilizar exclusivamente la plantilla independiente destinada a nuevos clientes.
+Utilizar exclusivamente:
 
-No utilizar directamente:
+"PLANTILLA/index.html"
 
+como plantilla maestra para nuevos clientes.
+
+"PLANTILLA/index.html" es un archivo protegido del sistema de automatización y debe considerarse SOLO LECTURA durante la creación de clientes.
+
+Nunca modificar directamente:
+- "PLANTILLA/index.html"
 - "Index.html"
 - "logo-cerrajeria.png"
-- otros archivos pertenecientes a clientes existentes
+- archivos pertenecientes a otros clientes
 
-Crear una copia independiente de la plantilla para el nuevo cliente.
+Para cada nuevo cliente:
+
+1. Comprobar que exista la carpeta "CLIENTES/".
+2. Crear una carpeta nueva y exclusiva dentro de "CLIENTES/" utilizando un identificador único del cliente.
+3. Comprobar que la carpeta del nuevo cliente no exista previamente.
+4. Crear dentro de esa carpeta una copia independiente de "PLANTILLA/index.html".
+5. Personalizar únicamente la copia ubicada dentro de la carpeta del nuevo cliente.
+6. Guardar dentro de la misma carpeta los recursos específicos de ese cliente cuando corresponda.
+
+Ejemplo:
+
+"PLANTILLA/index.html"
+        ↓
+"CLIENTES/nombre-del-cliente/index.html"
+
+Cada cliente debe tener su propia carpeta y sus propios archivos.
+
+Nunca utilizar la carpeta de un cliente existente para crear otro cliente.
+
+Si la carpeta del cliente ya existe, detenerse y solicitar confirmación antes de modificar cualquier archivo.
+
+Si existe cualquier duda sobre qué carpeta o archivo debe modificarse, detenerse y solicitar confirmación al usuario.
 
 PASO 3 — PERSONALIZAR
 
