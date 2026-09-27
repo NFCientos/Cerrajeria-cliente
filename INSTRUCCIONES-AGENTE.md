@@ -102,17 +102,58 @@ Solo mostrar las secciones para las cuales exista información relevante.
 
 Cuando se reciba el formulario de un nuevo cliente:
 
-1. Analizar toda la información.
-2. Seleccionar la plantilla independiente.
-3. Crear una copia independiente para el nuevo cliente.
-4. Personalizar únicamente esa copia.
-5. Incorporar los datos del cliente.
-6. Incorporar los recursos del cliente.
-7. Revisar enlaces y funciones.
-8. Comprobar que no existan datos de otros clientes.
-9. Mantener intactos los sitios existentes.
+1. Analizar toda la información proporcionada en "Formulario-cliente.md".
+2. Revisar "AGENTS.md" y "INSTRUCCIONES-AGENTE.md".
+3. Utilizar exclusivamente "PLANTILLA/index.html" como plantilla maestra para nuevos clientes.
+4. Considerar "PLANTILLA/index.html" como archivo protegido y de solo lectura durante la creación del cliente.
+5. Comprobar que exista la carpeta "CLIENTES/".
+6. Crear una carpeta nueva y exclusiva dentro de "CLIENTES/" para el nuevo cliente.
+7. Comprobar que esa carpeta no exista previamente.
+8. Crear dentro de esa carpeta una copia independiente de "PLANTILLA/index.html".
+9. Personalizar únicamente la copia ubicada dentro de la carpeta del nuevo cliente.
+10. Incorporar exclusivamente los datos proporcionados por ese cliente.
+11. Incorporar únicamente los recursos correspondientes a ese cliente.
+12. Mantener los recursos específicos del cliente dentro de su propia carpeta cuando corresponda.
+13. Revisar todos los enlaces, botones, imágenes y funciones.
+14. Comprobar que no existan datos pertenecientes a otros clientes.
+15. Comprobar que ningún archivo protegido haya sido modificado.
+16. Mantener intactos todos los sitios existentes.
 
-Nunca utilizar directamente el sitio de Cerrajería como punto de partida.
+Ejemplo de estructura:
+
+"PLANTILLA/index.html"
+↓
+"CLIENTES/nombre-del-cliente/index.html"
+
+Cada cliente debe tener su propia carpeta, su propia página y sus propios recursos.
+
+Nunca utilizar:
+
+"Index.html"
+"logo-cerrajeria.png"
+"plantilla tarjeta profesional"
+la carpeta de otro cliente
+la página de otro cliente
+
+como punto de partida para crear un nuevo cliente.
+
+Si la carpeta del nuevo cliente ya existe:
+
+DETENER EL PROCESO.
+
+No sobrescribir ni modificar archivos existentes sin confirmación explícita del usuario.
+
+Si existe cualquier duda sobre qué carpeta o archivo corresponde al nuevo cliente:
+
+DETENER EL PROCESO Y SOLICITAR CONFIRMACIÓN AL USUARIO.
+
+No asumir.
+No sobrescribir.
+No eliminar.
+No modificar otros clientes.
+No modificar "PLANTILLA/index.html".
+
+Una vez creada y personalizada la copia independiente, continuar con las revisiones de CONTACTO, GOOGLE MAPS, REDES SOCIALES, DISEÑO, IMÁGENES y REVISIÓN FINAL.
 
 ---
 
