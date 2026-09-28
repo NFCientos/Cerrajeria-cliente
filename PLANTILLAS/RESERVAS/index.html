@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{NOMBRE_NEGOCIO}}</title>
+
+    <style>
+        :root {
+            --color-principal: {{COLOR_PRINCIPAL}};
+            --color-secundario: {{COLOR_SECUNDARIO}};
+            --color-fondo: {{COLOR_FONDO}};
+            --color-tarjeta: {{COLOR_TARJETA}};
+            --color-texto: {{COLOR_TEXTO}};
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--color-fondo);
+            color: var(--color-texto);
+            min-height: 100vh;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px 18px 40px;
+        }
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .especialidad {
+            color: var(--color-principal);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .descripcion {
+            margin-top: 12px;
+            line-height: 1.5;
+        }
+
+        .botones {
+            display: grid;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .boton {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .boton:hover {
+            transform: scale(1.02);
+        }
+
+        .principal {
+            background: var(--color-principal);
+            color: white;
+        }
+
+        .secundario {
+            background: var(--color-secundario);
+            color: white;
+        }
+
+        .tarjeta {
+            background: var(--color-tarjeta);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 18px;
+        }
+
+        .tarjeta h2 {
+            margin-bottom: 15px;
+            color: var(--color-principal);
+            font-size: 21px;
+        }
+
+        .lista {
+            padding-left: 20px;
+            line-height: 1.8;
+        }
+
+        .info {
+            line-height: 1.8;
+        }
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .red {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 12px;
+            background: var(--color-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+
+        <img
+            class="logo"
+            src="{{LOGO}}"
+            alt="{{NOMBRE_NEGOCIO}}">
+
+        <h1>{{NOMBRE_NEGOCIO}}</h1>
+
+        <div class="especialidad">
+            {{ESPECIALIDAD}}
+        </div>
+
+        <p class="descripcion">
+            {{DESCRIPCION}}
+        </p>
+
+    </header>
+
+
+    <!-- BOTONES PRINCIPALES -->
+    <div class="botones">
+
+        <a
+            class="boton principal"
+            href="{{RESERVA_LINK}}"
+            target="_blank">
+            📅 Reservar hora
+        </a>
+
+        <a
+            class="boton secundario"
+            href="https://wa.me/{{WHATSAPP_1}}?text={{MENSAJE_RESERVA}}"
+            target="_blank">
+            💬 WhatsApp
+        </a>
+
+        <a
+            class="boton secundario"
+            href="tel:{{TELEFONO_1}}">
+            📞 Llamar
+        </a>
+
+        <a
+            class="boton secundario"
+            href="{{GOOGLE_MAPS}}"
+            target="_blank">
+            📍 Cómo llegar
+        </a>
+
+    </div>
+
+
+    <!-- SERVICIOS -->
+    <section class="tarjeta">
+
+        <h2>✨ Servicios</h2>
+
+        <ul class="lista">
+            {{SERVICIOS}}
+        </ul>
+
+    </section>
+
+
+    <!-- HORARIOS -->
+    <section class="tarjeta">
+
+        <h2>🕐 Horarios</h2>
+
+        <div class="info">
+            {{HORARIOS}}
+        </div>
+
+    </section>
+
+
+    <!-- REDES SOCIALES -->
+    <section class="tarjeta">
+
+        <h2>📱 Redes sociales</h2>
+
+        <div class="redes">
+
+            {{REDES_SOCIALES}}
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+    <section class="tarjeta">
+
+        <h2>📸 Galería</h2>
+
+        <div>
+            {{GALERIA}}
+        </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN ADICIONAL -->
+    <section class="tarjeta">
+
+        <h2>ℹ️ Información</h2>
+
+        <div class="info">
+            {{INFORMACION_ADICIONAL}}
+        </div>
+
+    </section>
+
+
+    <footer>
+        Página creada por NFCientos
+    </footer>
+
+</div>
+
+</body>
+</html>
