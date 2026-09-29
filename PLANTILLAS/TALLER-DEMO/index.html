@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taller Mecánico Arica Juanka</title>
+
+    <style>
+        :root {
+            --color-principal: #e63946;
+            --color-secundario: #202020;
+            --color-fondo: #101010;
+            --color-tarjeta: #1b1b1b;
+            --color-texto: #f5f5f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px 16px 40px;
+        }
+
+        .encabezado {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .logo-demo {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            background: var(--color-principal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: bold;
+            color: white;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .subtitulo {
+            color: var(--color-principal);
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .descripcion {
+            margin-top: 12px;
+            opacity: 0.9;
+        }
+
+        .botones {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0 30px;
+        }
+
+        .boton {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .principal {
+            background: var(--color-principal);
+            color: white;
+        }
+
+        .secundario {
+            background: var(--color-secundario);
+            color: white;
+        }
+
+        .tarjeta {
+            background: var(--color-tarjeta);
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .tarjeta h2 {
+            color: var(--color-principal);
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .servicios {
+            display: grid;
+            gap: 10px;
+        }
+
+        .servicio {
+            background: var(--color-fondo);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid var(--color-principal);
+        }
+
+        .servicio strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .horarios {
+            line-height: 1.9;
+        }
+
+        .ubicacion {
+            line-height: 1.8;
+        }
+
+        .mapa {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .red {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 12px;
+            background: var(--color-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .informacion {
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            opacity: 0.65;
+        }
+
+        @media (min-width: 600px) {
+
+            .botones {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado">
+
+        <div class="logo-demo">
+            J
+        </div>
+
+        <h1>Taller "Mecanico Arica" Juanka</h1>
+
+        <div class="subtitulo">
+            Mecánica automotriz
+        </div>
+
+        <p class="descripcion">
+            Servicio mecánico para tu vehículo en Arica.
+            Consulta directamente y coordina tu atención.
+        </p>
+
+    </header>
+
+
+    <!-- CONTACTO PRINCIPAL -->
+
+    <div class="botones">
+
+        <a
+            class="boton principal"
+            href="https://wa.me/56998638928?text=Hola%20Juanka%2C%20quisiera%20consultar%20por%20un%20servicio%20para%20mi%20veh%C3%ADculo."
+            target="_blank">
+            💬 WhatsApp
+        </a>
+
+        <a
+            class="boton secundario"
+            href="tel:+56998638928">
+            📞 Llamar
+        </a>
+
+        <a
+            class="boton secundario"
+            href="https://www.google.com/maps/search/?api=1&query=Chapiqui%C3%B1a%202076%2C%20Arica%2C%20Chile"
+            target="_blank">
+            📍 Cómo llegar
+        </a>
+
+        <a
+            class="boton secundario"
+            href="#servicios">
+            🔧 Ver servicios
+        </a>
+
+    </div>
+
+
+    <!-- SERVICIOS -->
+
+    <section class="tarjeta" id="servicios">
+
+        <h2>🔧 Servicios</h2>
+
+        <div class="servicios">
+
+            <div class="servicio">
+                <strong>Mecánica automotriz</strong>
+                Atención y reparación de vehículos.
+            </div>
+
+            <div class="servicio">
+                <strong>Scanner automotriz</strong>
+                Diagnóstico mediante scanner automotriz.
+            </div>
+
+            <div class="servicio">
+                <strong>Consulta y diagnóstico</strong>
+                Coordina directamente la atención para tu vehículo.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRABAJOS -->
+
+    <section class="tarjeta">
+
+        <h2>🚗 Trabajos realizados</h2>
+
+        <p class="informacion">
+            Aquí podremos incorporar fotografías reales
+            de los trabajos realizados por el taller.
+        </p>
+
+    </section>
+
+
+    <!-- HORARIOS -->
+
+    <section class="tarjeta">
+
+        <h2>🕐 Horarios de atención</h2>
+
+        <div class="horarios">
+
+            Lunes: 09:00 – 19:00<br>
+            Martes: 09:00 – 19:00<br>
+            Miércoles: 09:00 – 19:00<br>
+            Jueves: 09:00 – 19:00<br>
+            Viernes: 09:00 – 19:00<br>
+            Sábado: 09:00 – 19:00<br>
+            Domingo: 09:00 – 19:00
+
+        </div>
+
+    </section>
+
+
+    <!-- UBICACIÓN -->
+
+    <section class="tarjeta">
+
+        <h2>📍 Ubicación</h2>
+
+        <div class="ubicacion">
+
+            <strong>Taller "Mecanico Arica" Juanka</strong><br>
+
+            Chapiquiña #2076<br>
+            Arica, Arica y Parinacota
+
+            <br><br>
+
+            <a
+                class="boton principal"
+                href="https://www.google.com/maps/search/?api=1&query=Chapiqui%C3%B1a%202076%2C%20Arica%2C%20Chile"
+                target="_blank">
+                📍 Abrir ubicación en Google Maps
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+
+    <section class="tarjeta">
+
+        <h2>📞 Contacto</h2>
+
+        <div class="informacion">
+
+            <strong>Teléfono:</strong><br>
+            +56 9 9863 8928
+
+            <br><br>
+
+            <strong>Atención:</strong><br>
+            Lunes a domingo · 09:00 – 19:00
+
+        </div>
+
+    </section>
+
+
+    <!-- LLAMADO FINAL -->
+
+    <section class="tarjeta">
+
+        <h2>🚘 ¿Necesitas atención para tu vehículo?</h2>
+
+        <p class="informacion">
+            Escríbenos para consultar por tu vehículo
+            y coordinar la atención.
+        </p>
+
+        <div style="margin-top:15px;">
+
+            <a
+                class="boton principal"
+                href="https://wa.me/56998638928?text=Hola%20Juanka%2C%20quisiera%20consultar%20por%20un%20servicio%20para%20mi%20veh%C3%ADculo."
+                target="_blank">
+                💬 Contactar por WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        Página DEMO creada por NFCientos
+    </footer>
+
+</div>
+
+</body>
+</html>
