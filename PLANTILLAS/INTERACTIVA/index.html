@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NFCientos | Soluciones digitales</title>
+
+    <meta
+        name="description"
+        content="Soluciones digitales NFCientos para negocios: NFC, páginas web, QR y soporte digital."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #1f2933;
+            line-height: 1.5;
+        }
+
+        .contenedor {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            max-width: 650px;
+            margin: auto;
+            color: #d1d5db;
+            font-size: 1.05rem;
+        }
+
+        section {
+            padding: 55px 0;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .titulo-seccion p {
+            color: #6b7280;
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.11);
+        }
+
+        .producto.destacado {
+            border: 2px solid #111827;
+        }
+
+        .icono {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .producto h3 {
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+        }
+
+        .descripcion {
+            color: #6b7280;
+            margin-bottom: 18px;
+            min-height: 45px;
+        }
+
+        .precio {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 18px;
+        }
+
+        .incluye {
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .incluye h4 {
+            margin-bottom: 10px;
+        }
+
+        .incluye ul {
+            list-style: none;
+        }
+
+        .incluye li {
+            margin-bottom: 7px;
+            color: #4b5563;
+        }
+
+        .incluye li::before {
+            content: "✓ ";
+            font-weight: bold;
+        }
+
+        .boton {
+            display: inline-block;
+            width: 100%;
+            padding: 13px 18px;
+            border-radius: 10px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            opacity: 0.9;
+        }
+
+        .boton.secundario {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        .care {
+            background: #111827;
+            color: white;
+            border-radius: 22px;
+            padding: 40px;
+        }
+
+        .care h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .care > p {
+            color: #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .care-box {
+            background: rgba(255,255,255,0.08);
+            padding: 22px;
+            border-radius: 15px;
+        }
+
+        .care-box h3 {
+            margin-bottom: 12px;
+        }
+
+        .care-box ul {
+            list-style: none;
+        }
+
+        .care-box li {
+            margin-bottom: 8px;
+            color: #e5e7eb;
+        }
+
+        .nota {
+            margin-top: 25px;
+            padding: 18px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        .comparacion {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #111827;
+            color: white;
+        }
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 40px 0;
+            }
+
+            .care {
+                padding: 28px 20px;
+            }
+
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        NFC
+    </div>
+
+    <h1>NFCientos</h1>
+
+    <p>
+        Soluciones digitales para negocios.
+        NFC, páginas web, códigos QR y soporte para mantener tu presencia digital funcionando.
+    </p>
+
+</header>
+
+
+<main>
+
+    <!-- ==========================================
+         PRODUCTOS
+         ========================================== -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Soluciones NFCientos</h2>
+
+                <p>
+                    Elige la solución que mejor se adapte a tu negocio.
+                </p>
+
+            </div>
+
+
+            <div class="productos">
+
+
+                <!-- LLAVERO NFC -->
+
+                <article class="producto">
+
+                    <div class="icono">🔑</div>
+
+                    <h3>Llavero Instagram NFC</h3>
+
+                    <p class="descripcion">
+                        Acceso rápido a tu presencia digital mediante tecnología NFC.
+                    </p>
+
+                    <div class="precio" data-precio="llaveroNFC">
+                        $6.000
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>NFC estándar</li>
+                            <li>Configuración inicial</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Consultar
+                    </a>
+
+                </article>
+
+
+                <!-- TARJETA UNIVERSAL -->
+
+                <article class="producto">
+
+                    <div class="icono">💳</div>
+
+                    <h3>Tarjeta Tienda Universal NFC</h3>
+
+                    <p class="descripcion">
+                        Una tarjeta NFC para compartir rápidamente tus principales enlaces.
+                    </p>
+
+                    <div class="precio" data-precio="tarjetaUniversalNFC">
+                        $9.000
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>NFC estándar</li>
+                            <li>Configuración inicial</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Consultar
+                    </a>
+
+                </article>
+
+
+                <!-- NFC PERSONALIZADO -->
+
+                <article class="producto">
+
+                    <div class="icono">🎨</div>
+
+                    <h3>NFC personalizado</h3>
+
+                    <p class="descripcion">
+                        Soluciones NFC con diseño o formato especial según las necesidades del negocio.
+                    </p>
+
+                    <div class="precio">
+                        Cotizar
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Puede incluir:</h4>
+
+                        <ul>
+                            <li>Formato especial</li>
+                            <li>Diseño personalizado</li>
+                            <li>Configuración NFC</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Solicitar cotización
+                    </a>
+
+                </article>
+
+
+                <!-- WEB ESENCIAL -->
+
+                <article class="producto">
+
+                    <div class="icono">🌐</div>
+
+                    <h3>Web Esencial</h3>
+
+                    <p class="descripcion">
+                        Página web profesional y adaptable a celulares, tablets y computadores.
+                    </p>
+
+                    <div class="precio" data-precio="webEsencial">
+                        $54.990
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>Web responsive</li>
+                            <li>Diseño profesional</li>
+                            <li>Publicación online</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Consultar
+                    </a>
+
+                </article>
+
+
+                <!-- WEB PROFESIONAL -->
+
+                <article class="producto destacado">
+
+                    <div class="icono">⭐</div>
+
+                    <h3>Web Profesional</h3>
+
+                    <p class="descripcion">
+                        Página web profesional con conexión NFC y código QR.
+                    </p>
+
+                    <div class="precio" data-precio="webProfesional">
+                        $89.990
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>Web responsive</li>
+                            <li>NFC simple</li>
+                            <li>QR incluido</li>
+                            <li>Publicación online</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Consultar
+                    </a>
+
+                </article>
+
+
+                <!-- WEB INTERACTIVA -->
+
+                <article class="producto destacado">
+
+                    <div class="icono">⚡</div>
+
+                    <h3>Web Interactiva</h3>
+
+                    <p class="descripcion">
+                        Una experiencia digital más completa para negocios que necesitan funciones interactivas.
+                    </p>
+
+                    <div class="precio" data-precio="webInteractiva">
+                        $134.990
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>Web responsive</li>
+                            <li>Diseño personalizado</li>
+                            <li>NFC simple</li>
+                            <li>QR incluido</li>
+                            <li>Funciones interactivas</li>
+                            <li>Flujos hacia WhatsApp</li>
+                            <li>Formularios y selectores</li>
+                            <li>Cotizadores según necesidad</li>
+                            <li>Publicación online</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#contacto" class="boton">
+                        Solicitar información
+                    </a>
+
+                </article>
+
+
+                <!-- CARE -->
+
+                <article class="producto">
+
+                    <div class="icono">🔧</div>
+
+                    <h3>NFCientos Care</h3>
+
+                    <p class="descripcion">
+                        Soporte y mantenimiento para mantener tu solución digital actualizada.
+                    </p>
+
+                    <div class="precio" data-precio="nfcientosCare">
+                        $19.990 / 3 meses
+                    </div>
+
+                    <div class="incluye">
+
+                        <h4>Incluye:</h4>
+
+                        <ul>
+                            <li>Hasta 4 solicitudes por trimestre</li>
+                            <li>Actualización de datos</li>
+                            <li>Actualización de fotografías</li>
+                            <li>Revisión general</li>
+                            <li>Soporte prioritario</li>
+                        </ul>
+
+                    </div>
+
+                    <a href="#care" class="boton">
+                        Ver beneficios
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         NFCIENTOS CARE
+         ========================================== -->
+
+    <section id="care">
+
+        <div class="contenedor">
+
+            <div class="care">
+
+                <h2>🔧 NFCientos Care</h2>
+
+                <p>
+                    Mantén tu presencia digital actualizada y cuenta con soporte cuando lo necesites.
+                </p>
+
+
+                <div class="care-grid">
+
+
+                    <div class="care-box">
+
+                        <h3>🔄 Actualizaciones</h3>
+
+                        <ul>
+                            <li>✓ Hasta 4 solicitudes por trimestre</li>
+                            <li>✓ Datos del negocio</li>
+                            <li>✓ WhatsApp y teléfonos</li>
+                            <li>✓ Horarios</li>
+                            <li>✓ Servicios</li>
+                            <li>✓ Enlaces</li>
+                            <li>✓ Fotografías</li>
+                            <li>✓ Pequeños ajustes visuales</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="care-box">
+
+                        <h3>🛠️ Soporte</h3>
+
+                        <ul>
+                            <li>✓ Revisión general</li>
+                            <li>✓ Revisión de enlaces NFC</li>
+                            <li>✓ Revisión de QR</li>
+                            <li>✓ Reprogramación NFC cuando corresponda</li>
+                            <li>✓ Corrección de pequeños errores</li>
+                            <li>✓ Soporte prioritario</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="care-box">
+
+                        <h3>🛡️ Reposición</h3>
+
+                        <ul>
+                            <li>✓ 1 dispositivo NFC por trimestre</li>
+                            <li>✓ Pérdida</li>
+                            <li>✓ Hurto</li>
+                            <li>✓ Daño</li>
+                            <li>✓ Sujeto al modelo disponible</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="nota">
+
+                    <strong>Condiciones de reposición:</strong>
+
+                    La reposición contempla 1 dispositivo NFC por trimestre
+                    en caso de pérdida, hurto o daño, sujeto al modelo disponible.
+                    Diseños o dispositivos personalizados pueden tener un costo adicional.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         COMPARACIÓN
+         ========================================== -->
+
+    <section>
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>Comparación de páginas web</h2>
+
+                <p>
+                    Una forma sencilla de visualizar las diferencias.
+                </p>
+
+            </div>
+
+
+            <div class="comparacion">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Característica</th>
+                            <th>Web Esencial</th>
+                            <th>Web Profesional</th>
+                            <th>Web Interactiva</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Web responsive</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Diseño personalizado</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>NFC simple</td>
+                            <td>—</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>QR</td>
+                            <td>—</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Funciones interactivas</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Formularios / selectores</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>✓</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cotizadores / estimadores</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>✓</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CONTACTO
+         ========================================== -->
+
+    <section id="contacto">
+
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+
+                <h2>¿Qué necesita tu negocio?</h2>
+
+                <p>
+                    Cuéntanos qué solución estás buscando y evaluamos la mejor alternativa.
+                </p>
+
+            </div>
+
+            <div style="max-width:500px;margin:auto;">
+
+                <a
+                    href="#"
+                    class="boton"
+                    onclick="contactarWhatsApp(); return false;"
+                >
+                    📲 Contactar por WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        <strong>NFCientos</strong>
+    </p>
+
+    <p>
+        Soluciones digitales para negocios.
+    </p>
+
+</footer>
+
+
+<script>
+
+    /* ==================================================
+       CONFIGURACIÓN CENTRAL DE NFCIENTOS
+       ==================================================
+
+       AQUÍ SE MODIFICAN LOS PRECIOS.
+
+       No es necesario buscar cada precio dentro
+       del código de la página.
+
+       ================================================== */
+
+    const CONFIG = {
+
+        negocio: {
+            nombre: "NFCientos"
+        },
+
+        contacto: {
+            whatsapp: ""
+        },
+
+        precios: {
+
+            llaveroNFC: 6000,
+
+            tarjetaUniversalNFC: 9000,
+
+            webEsencial: 54990,
+
+            webProfesional: 89990,
+
+            webInteractiva: 134990,
+
+            nfcientosCare: 19990
+
+        }
+
+    };
+
+
+    /* ==================================================
+       FORMATO DE PRECIOS
+       ================================================== */
+
+    function formatoPrecio(valor) {
+
+        return "$" + valor.toLocaleString("es-CL");
+
+    }
+
+
+    /* ==================================================
+       ACTUALIZACIÓN AUTOMÁTICA DE PRECIOS
+       ================================================== */
+
+    document.querySelectorAll("[data-precio]").forEach(elemento => {
+
+        const clave = elemento.dataset.precio;
+
+        if (CONFIG.precios[clave] !== undefined) {
+
+            if (clave === "nfcientosCare") {
+
+                elemento.textContent =
+                    formatoPrecio(CONFIG.precios[clave]) + " / 3 meses";
+
+            } else {
+
+                elemento.textContent =
+                    formatoPrecio(CONFIG.precios[clave]);
+
+            }
+
+        }
+
+    });
+
+
+    /* ==================================================
+       WHATSAPP
+       ================================================== */
+
+    function contactarWhatsApp() {
+
+        const numero = CONFIG.contacto.whatsapp;
+
+        if (!numero) {
+
+            alert(
+                "El número de WhatsApp todavía no ha sido configurado."
+            );
+
+            return;
+
+        }
+
+        const mensaje =
+            "Hola, estoy interesado en conocer las soluciones de NFCientos.";
+
+        const url =
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            encodeURIComponent(mensaje);
+
+        window.open(url, "_blank");
+
+    }
+
+</script>
+
+</body>
+</html>
