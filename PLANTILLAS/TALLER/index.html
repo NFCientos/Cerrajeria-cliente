@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{NOMBRE_NEGOCIO}}</title>
+
+    <style>
+        :root {
+            --color-principal: {{COLOR_PRINCIPAL}};
+            --color-secundario: {{COLOR_SECUNDARIO}};
+            --color-fondo: {{COLOR_FONDO}};
+            --color-tarjeta: {{COLOR_TARJETA}};
+            --color-texto: {{COLOR_TEXTO}};
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .contenedor {
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px 16px 40px;
+        }
+
+        /* ENCABEZADO */
+
+        .encabezado {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .logo {
+            width: 125px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .subtitulo {
+            color: var(--color-principal);
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .descripcion {
+            margin-top: 12px;
+            opacity: 0.9;
+        }
+
+        /* BOTONES */
+
+        .botones {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0 30px;
+        }
+
+        .boton {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .principal {
+            background: var(--color-principal);
+            color: white;
+        }
+
+        .secundario {
+            background: var(--color-secundario);
+            color: white;
+        }
+
+        /* TARJETAS */
+
+        .tarjeta {
+            background: var(--color-tarjeta);
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+
+        .tarjeta h2 {
+            color: var(--color-principal);
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        /* SERVICIOS */
+
+        .servicios {
+            display: grid;
+            gap: 10px;
+        }
+
+        .servicio {
+            background: var(--color-fondo);
+            border-radius: 10px;
+            padding: 14px;
+            border-left: 4px solid var(--color-principal);
+        }
+
+        .servicio strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* GALERÍA */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* HORARIOS */
+
+        .horarios {
+            line-height: 1.9;
+        }
+
+        /* UBICACIÓN */
+
+        .ubicacion {
+            line-height: 1.8;
+        }
+
+        .mapa {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        /* REDES */
+
+        .redes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .red {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            padding: 12px;
+            background: var(--color-secundario);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        /* INFORMACIÓN */
+
+        .informacion {
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            opacity: 0.65;
+        }
+
+        @media (min-width: 600px) {
+
+            .botones {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .galeria {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado">
+
+        <img
+            class="logo"
+            src="{{LOGO}}"
+            alt="{{NOMBRE_NEGOCIO}}">
+
+        <h1>{{NOMBRE_NEGOCIO}}</h1>
+
+        <div class="subtitulo">
+            {{ESPECIALIDAD}}
+        </div>
+
+        <p class="descripcion">
+            {{DESCRIPCION}}
+        </p>
+
+    </header>
+
+
+    <!-- CONTACTO PRINCIPAL -->
+
+    <div class="botones">
+
+        <a
+            class="boton principal"
+            href="https://wa.me/{{WHATSAPP_1}}?text={{MENSAJE_WHATSAPP}}"
+            target="_blank">
+            💬 WhatsApp
+        </a>
+
+        <a
+            class="boton secundario"
+            href="tel:{{TELEFONO_1}}">
+            📞 Llamar
+        </a>
+
+        <a
+            class="boton secundario"
+            href="{{GOOGLE_MAPS}}"
+            target="_blank">
+            📍 Cómo llegar
+        </a>
+
+        <a
+            class="boton secundario"
+            href="#servicios">
+            🔧 Ver servicios
+        </a>
+
+    </div>
+
+
+    <!-- SERVICIOS -->
+
+    <section class="tarjeta" id="servicios">
+
+        <h2>🔧 Nuestros servicios</h2>
+
+        <div class="servicios">
+
+            {{SERVICIOS}}
+
+        </div>
+
+    </section>
+
+
+    <!-- TRABAJOS REALIZADOS -->
+
+    <section class="tarjeta">
+
+        <h2>🚗 Trabajos realizados</h2>
+
+        <div class="galeria">
+
+            {{GALERIA}}
+
+        </div>
+
+    </section>
+
+
+    <!-- HORARIOS -->
+
+    <section class="tarjeta">
+
+        <h2>🕐 Horarios de atención</h2>
+
+        <div class="horarios">
+
+            {{HORARIOS}}
+
+        </div>
+
+    </section>
+
+
+    <!-- UBICACIÓN -->
+
+    <section class="tarjeta">
+
+        <
