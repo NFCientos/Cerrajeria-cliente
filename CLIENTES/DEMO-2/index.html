@@ -537,7 +537,7 @@
                         <h4>Incluye:</h4>
 
                         <ul>
-                            <li>Hasta 4 solicitudes por trimestre</li>
+                            <li>Hasta 3 solicitudes por trimestre</li>
                             <li>Actualización de datos</li>
                             <li>Actualización de fotografías</li>
                             <li>Revisión general</li>
@@ -581,7 +581,7 @@
                         <h3>🔄 Actualizaciones</h3>
 
                         <ul>
-                            <li>✓ Hasta 4 solicitudes por trimestre</li>
+                            <li>✓ Hasta 3 solicitudes por trimestre</li>
                             <li>✓ Datos del negocio</li>
                             <li>✓ WhatsApp y teléfonos</li>
                             <li>✓ Horarios</li>
@@ -809,7 +809,7 @@
 
             webProfesional: 89990,
 
-            webInteractiva: 134990,
+            webInteractiva: "COTIZABLE",
 
             nfcientosCare: 19990
 
@@ -844,14 +844,14 @@
                 elemento.textContent =
                     formatoPrecio(CONFIG.precios[clave]) + " / 3 meses";
 
-            } else {
+            } else if (clave === "webInteractiva") {
+    elemento.textContent =
+        CONFIG.precios[clave];
+} else {
+    elemento.textContent =
+        formatoPrecio(CONFIG.precios[clave]);
+    }
 
-                elemento.textContent =
-                    formatoPrecio(CONFIG.precios[clave]);
-
-            }
-
-        }
 
     });
 
