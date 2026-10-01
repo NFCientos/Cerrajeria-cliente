@@ -171,11 +171,6 @@
             opacity: 0.9;
         }
 
-        .boton.secundario {
-            background: #e5e7eb;
-            color: #111827;
-        }
-
         .care {
             background: #111827;
             color: white;
@@ -302,10 +297,6 @@
 
 <main>
 
-    <!-- ==========================================
-         PRODUCTOS
-         ========================================== -->
-
     <section>
 
         <div class="contenedor">
@@ -323,8 +314,6 @@
 
             <div class="productos">
 
-
-                <!-- LLAVERO NFC -->
 
                 <article class="producto">
 
@@ -358,8 +347,6 @@
                 </article>
 
 
-                <!-- TARJETA UNIVERSAL -->
-
                 <article class="producto">
 
                     <div class="icono">💳</div>
@@ -391,8 +378,6 @@
 
                 </article>
 
-
-                <!-- NFC PERSONALIZADO -->
 
                 <article class="producto">
 
@@ -427,8 +412,6 @@
                 </article>
 
 
-                <!-- WEB ESENCIAL -->
-
                 <article class="producto">
 
                     <div class="icono">🌐</div>
@@ -461,8 +444,6 @@
 
                 </article>
 
-
-                <!-- WEB PROFESIONAL -->
 
                 <article class="producto destacado">
 
@@ -497,8 +478,6 @@
 
                 </article>
 
-
-                <!-- WEB INTERACTIVA -->
 
                 <article class="producto destacado">
 
@@ -538,8 +517,6 @@
 
                 </article>
 
-
-                <!-- CARE -->
 
                 <article class="producto">
 
@@ -582,10 +559,6 @@
 
     </section>
 
-
-    <!-- ==========================================
-         NFCIENTOS CARE
-         ========================================== -->
 
     <section id="care">
 
@@ -671,10 +644,6 @@
 
     </section>
 
-
-    <!-- ==========================================
-         COMPARACIÓN
-         ========================================== -->
 
     <section>
 
@@ -768,10 +737,6 @@
     </section>
 
 
-    <!-- ==========================================
-         CONTACTO
-         ========================================== -->
-
     <section id="contacto">
 
         <div class="contenedor">
@@ -822,13 +787,6 @@
 
     /* ==================================================
        CONFIGURACIÓN CENTRAL DE NFCIENTOS
-       ==================================================
-
-       AQUÍ SE MODIFICAN LOS PRECIOS.
-
-       No es necesario buscar cada precio dentro
-       del código de la página.
-
        ================================================== */
 
     const CONFIG = {
@@ -838,7 +796,7 @@
         },
 
         contacto: {
-            whatsapp: ""
+            whatsapp: "921901567"
         },
 
         precios: {
@@ -851,7 +809,7 @@
 
             webProfesional: 89990,
 
-            webInteractiva: COTIZABLE,
+            webInteractiva: "COTIZABLE",
 
             nfcientosCare: 19990
 
@@ -885,6 +843,11 @@
 
                 elemento.textContent =
                     formatoPrecio(CONFIG.precios[clave]) + " / 3 meses";
+
+            } else if (clave === "webInteractiva") {
+
+                elemento.textContent =
+                    CONFIG.precios[clave];
 
             } else {
 
