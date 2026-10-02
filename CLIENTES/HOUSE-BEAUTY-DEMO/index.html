@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>House Beauty | Arica</title>
+  <title>HOUSE BEAUTY | Arica</title>
 
   <meta
     name="description"
-    content="House Beauty Arica — belleza, estilo y experiencias para ti."
+    content="HOUSE BEAUTY — Salón de belleza en Arica."
   >
 
-  <meta name="theme-color" content="#201820">
+  <meta name="theme-color" content="#171217">
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -26,8 +27,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #faf7f8;
-      color: #261f24;
+      background: #faf8f9;
+      color: #211c20;
       line-height: 1.6;
     }
 
@@ -36,107 +37,109 @@
       color: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     /* =========================
        HERO
     ========================= */
 
     .hero {
       min-height: 92vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 50px 20px;
+
+      padding: 40px 20px;
+
       color: white;
 
       background:
         radial-gradient(
           circle at 20% 20%,
-          rgba(196, 157, 176, .35),
+          rgba(205,170,187,.25),
           transparent 35%
         ),
         radial-gradient(
-          circle at 80% 70%,
-          rgba(154, 112, 135, .25),
+          circle at 80% 75%,
+          rgba(170,125,148,.20),
           transparent 35%
         ),
         linear-gradient(
           145deg,
-          #171217,
-          #342731 55%,
-          #171217
+          #151215,
+          #30262d 55%,
+          #171417
         );
     }
 
     .hero-content {
+      width: 100%;
       max-width: 780px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 5px;
       font-size: 11px;
-      opacity: .8;
-      margin-bottom: 24px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      opacity: .75;
+      margin-bottom: 25px;
     }
 
     .hero h1 {
       font-family: Georgia, serif;
       font-weight: 400;
-      font-size: clamp(50px, 12vw, 94px);
+
+      font-size: clamp(48px, 12vw, 92px);
+
       line-height: .95;
-      margin-bottom: 20px;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 25px;
     }
 
-    .hero h1 span {
-      display: block;
-      margin-top: 20px;
-      font-family: Arial, sans-serif;
-      font-size: .25em;
-      letter-spacing: 9px;
-      text-transform: uppercase;
-      opacity: .85;
-    }
+    .hero-subtitle {
+      max-width: 560px;
 
-    .hero p {
-      max-width: 590px;
       margin: 0 auto 32px;
-      color: #eee5e9;
+
+      color: #eee6ea;
+
       font-size: 17px;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .btn {
+    .button {
       display: inline-block;
-      padding: 14px 24px;
+
+      padding: 14px 25px;
+
       border-radius: 50px;
+
       font-weight: bold;
+
       transition: .2s ease;
     }
 
-    .btn:hover {
+    .button:hover {
       transform: translateY(-3px);
     }
 
-    .btn-light {
-      background: #fff;
-      color: #241d22;
+    .button-light {
+      background: white;
+      color: #211c20;
     }
 
-    .btn-dark {
+    .button-outline {
       border: 1px solid rgba(255,255,255,.45);
-      color: #fff;
+      color: white;
     }
 
     /* =========================
@@ -152,31 +155,41 @@
       margin: auto;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
       margin-bottom: 45px;
     }
 
-    .section-title small {
+    .section-heading span {
       display: block;
-      color: #946d80;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 3px;
+
+      color: #956d80;
+
       font-size: 11px;
+
+      font-weight: bold;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
       margin-bottom: 10px;
     }
 
-    .section-title h2 {
+    .section-heading h2 {
       font-family: Georgia, serif;
+
+      font-size: clamp(35px, 7vw, 50px);
+
       font-weight: 400;
-      font-size: clamp(34px, 7vw, 50px);
     }
 
-    .section-title p {
+    .section-heading p {
       max-width: 650px;
+
       margin: 12px auto 0;
-      color: #756d72;
+
+      color: #746d72;
     }
 
     /* =========================
@@ -184,178 +197,154 @@
     ========================= */
 
     .services {
-      background: #fff;
+      background: #ffffff;
     }
 
     .service-grid {
       display: grid;
+
       grid-template-columns: repeat(2, 1fr);
+
       gap: 18px;
     }
 
     .service-card {
       padding: 30px;
-      border: 1px solid #e9dfe4;
+
+      border: 1px solid #e9e1e5;
+
       border-radius: 20px;
+
       background: #fff;
-      transition: .25s ease;
+
+      transition: .2s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(45,25,35,.08);
+      transform: translateY(-4px);
+
+      box-shadow:
+        0 15px 35px rgba(40,25,35,.07);
     }
 
     .service-number {
-      color: #aa8395;
       font-size: 11px;
+
       letter-spacing: 3px;
+
+      color: #aa8495;
+
       margin-bottom: 13px;
     }
 
     .service-card h3 {
       font-family: Georgia, serif;
-      font-size: 28px;
+
+      font-size: 27px;
+
       font-weight: 400;
+
       margin-bottom: 8px;
     }
 
     .service-card p {
-      color: #766e73;
+      color: #746d72;
+
       font-size: 15px;
     }
 
     /* =========================
-       BEAUTY SHOP
+       EXPERIENCIA
     ========================= */
 
-    .shop {
-      background: #f1e8ed;
+    .experience {
+      background: #f2eaee;
     }
 
-    .shop-grid {
+    .experience-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 40px;
+
       align-items: center;
     }
 
-    .shop-content h2 {
+    .experience-text h2 {
       font-family: Georgia, serif;
+
       font-size: clamp(38px, 6vw, 55px);
+
       font-weight: 400;
-      margin-bottom: 15px;
+
+      margin-bottom: 18px;
     }
 
-    .shop-content p {
-      color: #6d6268;
-      margin-bottom: 22px;
+    .experience-text p {
+      color: #696067;
+
+      margin-bottom: 20px;
     }
 
-    .shop-list {
+    .experience-list {
       list-style: none;
+
       display: grid;
-      gap: 9px;
+
+      gap: 10px;
     }
 
-    .shop-list li {
-      background: #fff;
-      padding: 12px 16px;
+    .experience-list li {
+      padding: 12px 15px;
+
+      background: white;
+
       border-radius: 10px;
     }
 
-    .shop-visual {
-      min-height: 340px;
-      border-radius: 25px;
+    .experience-visual {
+      min-height: 330px;
+
       display: flex;
-      justify-content: center;
+
       align-items: center;
+
+      justify-content: center;
+
       text-align: center;
+
       padding: 30px;
+
+      border-radius: 25px;
 
       background:
         radial-gradient(
           circle at 30% 25%,
-          #d9bdca,
+          #d8bfca,
           transparent 30%
         ),
         linear-gradient(
           145deg,
-          #3b2d36,
-          #8b6678
+          #3a2d35,
+          #886879
         );
 
-      color: #fff;
+      color: white;
     }
 
-    .shop-visual strong {
-      display: block;
+    .experience-visual h3 {
       font-family: Georgia, serif;
-      font-size: 50px;
+
+      font-size: 48px;
+
       font-weight: 400;
+
       margin-bottom: 10px;
     }
 
-    .shop-visual p {
-      color: #eee4e9;
-    }
-
-    /* =========================
-       CLUB
-    ========================= */
-
-    .club {
-      background: #241d23;
-      color: #fff;
-      text-align: center;
-    }
-
-    .club-box {
-      max-width: 800px;
-      margin: auto;
-      padding: 55px 25px;
-      border: 1px solid rgba(255,255,255,.14);
-      border-radius: 25px;
-      background: rgba(255,255,255,.035);
-    }
-
-    .club-symbol {
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
-
-    .club h2 {
-      font-family: Georgia, serif;
-      font-size: clamp(38px, 7vw, 55px);
-      font-weight: 400;
-      margin-bottom: 15px;
-    }
-
-    .club p {
-      max-width: 600px;
-      margin: 0 auto 25px;
-      color: #d7ced3;
-    }
-
-    .club-features {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-bottom: 28px;
-    }
-
-    .club-feature {
-      padding: 9px 15px;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50px;
-      font-size: 13px;
-    }
-
-    .club-note {
-      color: #aaa0a6;
-      font-size: 11px;
-      letter-spacing: .5px;
+    .experience-visual p {
+      color: #eee5e9;
     }
 
     /* =========================
@@ -363,48 +352,184 @@
     ========================= */
 
     .contact {
-      background: #fff;
+      background: white;
+
       text-align: center;
     }
 
     .contact-card {
-      max-width: 750px;
+      max-width: 780px;
+
       margin: auto;
+
       padding: 45px 25px;
+
+      background: #faf8f9;
+
       border-radius: 25px;
-      background: #faf7f8;
     }
 
     .contact-info {
       display: grid;
-      gap: 10px;
+
+      gap: 9px;
+
       margin: 25px 0;
-      color: #665d63;
+
+      color: #655e63;
     }
 
-    .contact-actions {
+    .contact-buttons {
       display: flex;
+
       justify-content: center;
+
       flex-wrap: wrap;
+
       gap: 10px;
     }
 
-    .contact-btn {
+    .contact-button {
       display: inline-block;
+
       padding: 13px 20px;
-      border-radius: 40px;
-      background: #261f24;
-      color: #fff;
+
+      border-radius: 50px;
+
+      background: #241f23;
+
+      color: white;
+
       font-weight: bold;
+
       transition: .2s;
     }
 
-    .contact-btn:hover {
+    .contact-button:hover {
       transform: translateY(-2px);
     }
 
-    .instagram-btn {
-      background: #946d80;
+    .instagram {
+      background: #936d7f;
+    }
+
+    /* =========================
+       HORARIOS
+    ========================= */
+
+    .hours {
+      margin-top: 35px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid #e5dfe2;
+    }
+
+    .hours h3 {
+      font-family: Georgia, serif;
+
+      font-size: 25px;
+
+      font-weight: 400;
+
+      margin-bottom: 15px;
+    }
+
+    .hours-grid {
+      max-width: 450px;
+
+      margin: auto;
+
+      display: grid;
+
+      gap: 7px;
+
+      font-size: 14px;
+
+      color: #6b6368;
+    }
+
+    .hour-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    /* =========================
+       CLUB FUTURO
+    ========================= */
+
+    .future-club {
+      background: #211b20;
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .future-box {
+      max-width: 750px;
+
+      margin: auto;
+
+      padding: 45px 25px;
+
+      border:
+        1px solid rgba(255,255,255,.13);
+
+      border-radius: 25px;
+
+      background:
+        rgba(255,255,255,.035);
+    }
+
+    .future-label {
+      display: inline-block;
+
+      padding: 6px 12px;
+
+      border:
+        1px solid rgba(255,255,255,.2);
+
+      border-radius: 30px;
+
+      font-size: 10px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      color: #cbbcc3;
+
+      margin-bottom: 18px;
+    }
+
+    .future-box h2 {
+      font-family: Georgia, serif;
+
+      font-size: clamp(35px, 7vw, 50px);
+
+      font-weight: 400;
+
+      margin-bottom: 12px;
+    }
+
+    .future-box p {
+      max-width: 600px;
+
+      margin: auto;
+
+      color: #d3cbd0;
+    }
+
+    .future-note {
+      margin-top: 22px;
+
+      font-size: 11px;
+
+      color: #9f959b;
     }
 
     /* =========================
@@ -412,20 +537,25 @@
     ========================= */
 
     footer {
-      padding: 28px 20px;
-      background: #171217;
-      color: #aaa0a6;
+      padding: 27px 20px;
+
       text-align: center;
+
+      background: #151215;
+
+      color: #9e959b;
+
       font-size: 12px;
     }
 
     footer strong {
-      color: #fff;
+      color: white;
     }
 
-    .demo-label {
+    .demo {
       margin-top: 6px;
-      opacity: .65;
+
+      opacity: .6;
     }
 
     /* =========================
@@ -435,7 +565,7 @@
     @media (max-width: 720px) {
 
       .service-grid,
-      .shop-grid {
+      .experience-grid {
         grid-template-columns: 1fr;
       }
 
@@ -443,15 +573,17 @@
         min-height: 88vh;
       }
 
-      .buttons,
-      .contact-actions {
+      .hero-buttons,
+      .contact-buttons {
         flex-direction: column;
+
         align-items: center;
       }
 
-      .btn,
-      .contact-btn {
+      .button,
+      .contact-button {
         width: 100%;
+
         max-width: 280px;
       }
 
@@ -459,13 +591,19 @@
         padding: 65px 18px;
       }
 
-      .shop-visual {
+      .experience-visual {
         min-height: 260px;
       }
+
+      .hour-row {
+        font-size: 13px;
+      }
+
     }
 
   </style>
 </head>
+
 
 <body>
 
@@ -479,26 +617,30 @@
     <div class="hero-content">
 
       <div class="eyebrow">
-        Belleza · Estilo · Experiencia
+        Salón de belleza
       </div>
 
       <h1>
-        House Beauty
-        <span>Arica</span>
+        HOUSE BEAUTY
       </h1>
 
-      <p>
-        Un espacio de belleza integral donde el estilo,
-        el cuidado y los detalles se encuentran.
+      <p class="hero-subtitle">
+        Belleza, estilo y cuidado en Arica.
       </p>
 
-      <div class="buttons">
+      <div class="hero-buttons">
 
-        <a href="#servicios" class="btn btn-light">
-          Descubrir servicios
+        <a
+          href="#servicios"
+          class="button button-light"
+        >
+          Ver servicios
         </a>
 
-        <a href="#contacto" class="btn btn-dark">
+        <a
+          href="#contacto"
+          class="button button-outline"
+        >
           Contactar
         </a>
 
@@ -513,19 +655,26 @@
        SERVICIOS
   ========================= -->
 
-  <section class="services" id="servicios">
+  <section
+    class="services"
+    id="servicios"
+  >
 
     <div class="container">
 
-      <div class="section-title">
+      <div class="section-heading">
 
-        <small>House Beauty</small>
+        <span>
+          HOUSE BEAUTY
+        </span>
 
-        <h2>Servicios de belleza</h2>
+        <h2>
+          Servicios
+        </h2>
 
         <p>
-          Descubre las principales áreas de belleza y cuidado
-          asociadas públicamente a House Beauty.
+          Conoce algunas de las áreas de belleza y cuidado
+          asociadas públicamente a HOUSE BEAUTY.
         </p>
 
       </div>
@@ -562,8 +711,8 @@
           </h3>
 
           <p>
-            Servicios relacionados con color y transformación
-            del cabello.
+            Servicios relacionados con color y
+            transformación del cabello.
           </p>
 
         </article>
@@ -580,8 +729,8 @@
           </h3>
 
           <p>
-            Alternativas orientadas al cuidado y tratamiento
-            del cabello.
+            Alternativas orientadas al cuidado
+            y tratamiento del cabello.
           </p>
 
         </article>
@@ -598,7 +747,8 @@
           </h3>
 
           <p>
-            Servicios de cuidado y belleza para manos y pies.
+            Servicios de cuidado y belleza
+            para manos y pies.
           </p>
 
         </article>
@@ -611,30 +761,12 @@
           </div>
 
           <h3>
-            Belleza & Estética
+            Belleza y estética
           </h3>
 
           <p>
-            Servicios y tratamientos relacionados con belleza
+            Servicios relacionados con belleza
             y estética.
-          </p>
-
-        </article>
-
-
-        <article class="service-card">
-
-          <div class="service-number">
-            06
-          </div>
-
-          <h3>
-            Beauty Shop
-          </h3>
-
-          <p>
-            Productos de belleza, productos capilares,
-            cosméticos y perfumería.
           </p>
 
         </article>
@@ -648,59 +780,59 @@
 
 
   <!-- =========================
-       BEAUTY SHOP
+       EXPERIENCIA
   ========================= -->
 
-  <section class="shop">
+  <section class="experience">
 
     <div class="container">
 
-      <div class="shop-grid">
+      <div class="experience-grid">
 
 
-        <div class="shop-content">
+        <div class="experience-text">
 
-          <div class="section-title"
+          <div class="section-heading"
                style="text-align:left;margin-bottom:20px;">
 
-            <small>
-              Más que belleza
-            </small>
+            <span>
+              HOUSE BEAUTY
+            </span>
 
             <h2>
-              Beauty Shop
+              Una experiencia
+              pensada para ti
             </h2>
 
           </div>
 
-
           <p>
-            Una experiencia de belleza que también puede
-            complementarse con productos y detalles para
-            llevar contigo.
+            HOUSE BEAUTY está registrada públicamente
+            como salón de belleza integral, además de
+            desarrollar actividades relacionadas con
+            productos de belleza.
           </p>
 
-
-          <ul class="shop-list">
+          <ul class="experience-list">
 
             <li>
-              ✨ Productos de belleza
+              ✦ Productos de belleza
             </li>
 
             <li>
-              ✨ Productos capilares
+              ✦ Productos capilares
             </li>
 
             <li>
-              ✨ Cosméticos
+              ✦ Cosméticos
             </li>
 
             <li>
-              ✨ Perfumería
+              ✦ Perfumería
             </li>
 
             <li>
-              ✨ Joyería y artesanía
+              ✦ Joyería y artesanía
             </li>
 
           </ul>
@@ -708,17 +840,18 @@
         </div>
 
 
-        <div class="shop-visual">
+        <div class="experience-visual">
 
           <div>
 
-            <strong>
-              Beauty
-            </strong>
+            <h3>
+              HOUSE
+              <br>
+              BEAUTY
+            </h3>
 
             <p>
-              Todo lo que complementa
-              tu experiencia House Beauty.
+              Arica
             </p>
 
           </div>
@@ -734,85 +867,32 @@
 
 
   <!-- =========================
-       FUTURO CLUB
-  ========================= -->
-
-  <section class="club">
-
-    <div class="container">
-
-      <div class="club-box">
-
-        <div class="club-symbol">
-          ✦
-        </div>
-
-        <h2>
-          House Beauty Club
-        </h2>
-
-        <p>
-          Una futura experiencia de fidelización pensada
-          para quienes quieren disfrutar de beneficios,
-          recompensas y novedades especiales.
-        </p>
-
-
-        <div class="club-features">
-
-          <div class="club-feature">
-            ✨ Beneficios
-          </div>
-
-          <div class="club-feature">
-            🎁 Recompensas
-          </div>
-
-          <div class="club-feature">
-            ⭐ Experiencias
-          </div>
-
-          <div class="club-feature">
-            💗 Novedades
-          </div>
-
-        </div>
-
-
-        <div class="club-note">
-          Concepto de demostración · NFCientos
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
        CONTACTO
   ========================= -->
 
-  <section class="contact" id="contacto">
+  <section
+    class="contact"
+    id="contacto"
+  >
 
     <div class="container">
 
       <div class="contact-card">
 
-        <div class="section-title">
 
-          <small>
-            House Beauty
-          </small>
+        <div class="section-heading">
+
+          <span>
+            HOUSE BEAUTY
+          </span>
 
           <h2>
             Encuéntranos
           </h2>
 
           <p>
-            Consulta directamente por servicios,
-            disponibilidad y atención.
+            Comunícate directamente para consultar
+            por servicios y disponibilidad.
           </p>
 
         </div>
@@ -831,43 +911,126 @@
         </div>
 
 
-        <div class="contact-actions">
+        <div class="contact-buttons">
 
-
-          <!-- LLAMADA -->
 
           <a
             href="tel:+56926964560"
-            class="contact-btn"
+            class="contact-button"
           >
             📞 Llamar
           </a>
 
 
-          <!-- INSTAGRAM -->
-
           <a
             href="https://www.instagram.com/__house.beauty__/"
             target="_blank"
             rel="noopener noreferrer"
-            class="contact-btn instagram-btn"
+            class="contact-button instagram"
           >
             📸 Instagram
           </a>
 
 
-          <!-- MAPS -->
-
           <a
-            href="https://www.google.com/maps/search/?api=1&query=House+Beauty+21+de+Mayo+699+Arica"
+            href="https://www.google.com/maps/search/?api=1&query=21+de+Mayo+699+Arica"
             target="_blank"
             rel="noopener noreferrer"
-            class="contact-btn"
+            class="contact-button"
           >
             📍 Cómo llegar
           </a>
 
 
+        </div>
+
+
+        <!-- HORARIOS -->
+
+        <div class="hours">
+
+          <h3>
+            Horarios
+          </h3>
+
+          <div class="hours-grid">
+
+            <div class="hour-row">
+              <span>Lunes</span>
+              <span>09:00 – 17:30</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Martes</span>
+              <span>09:00 – 17:30</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Miércoles</span>
+              <span>10:00 – 17:30</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Jueves</span>
+              <span>09:00 – 18:00</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Viernes</span>
+              <span>09:00 – 18:00</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Sábado</span>
+              <span>10:30 – 17:00</span>
+            </div>
+
+            <div class="hour-row">
+              <span>Domingo</span>
+              <span>Cerrado</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONCEPTO FUTURO
+       NO ES UNA FUNCIÓN ACTUAL
+  ========================= -->
+
+  <section class="future-club">
+
+    <div class="container">
+
+      <div class="future-box">
+
+        <div class="future-label">
+          Concepto futuro
+        </div>
+
+        <h2>
+          HOUSE BEAUTY
+          <br>
+          CLUB
+        </h2>
+
+        <p>
+          Una posible evolución digital para conectar
+          a HOUSE BEAUTY con sus clientas mediante
+          beneficios, experiencias y fidelización.
+        </p>
+
+        <div class="future-note">
+          Propuesta conceptual · NFCientos
         </div>
 
       </div>
@@ -884,11 +1047,11 @@
   <footer>
 
     <p>
-      <strong>House Beauty</strong> · Arica
+      <strong>HOUSE BEAUTY</strong> · Arica
     </p>
 
-    <p class="demo-label">
-      Concepto de demostración desarrollado por NFCientos.
+    <p class="demo">
+      Demo conceptual desarrollada por NFCientos.
     </p>
 
   </footer>
